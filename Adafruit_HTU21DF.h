@@ -13,13 +13,22 @@
   Written by Limor Fried/Ladyada for Adafruit Industries.  
   BSD license, all text above must be included in any redistribution
  ****************************************************/
+#ifndef Adafruit_HTU21DF_h
+#define Adafruit_HTU21DF_h
 
+#ifdef SPARK_CORE
+// Spark - nothing to include
+#else
 #if (ARDUINO >= 100)
  #include "Arduino.h"
 #else
  #include "WProgram.h"
 #endif
 #include "Wire.h"
+
+
+#endif
+
 
 #define HTU21DF_I2CADDR       0x40
 #define HTU21DF_READTEMP      0xE3
